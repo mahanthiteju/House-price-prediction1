@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>House Price Prediction</h1>
+    <form method="POST">
+        <div class="form-group">
+            <label for="size">Size (sq ft):</label>
+            <input type="number" id="size" name="size" step="0.01" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="bhk">Number of BHK:</label>
+            <input type="number" id="bhk" name="bhk" min="1" max="10" required>
+        </div>
+
+        <div class="form-group">
+            <label for="under_construction">Under Construction:</label>
+            <select id="under_construction" name="under_construction" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="ready_to_move">Ready to Move:</label>
+            <select id="ready_to_move" name="ready_to_move" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="resale">Resale Property:</label>
+            <select id="resale" name="resale" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="rera">RERA Approved:</label>
+            <select id="rera" name="rera" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+
+        <input type="submit" value="Predict Price">
+    </form>
+</body>
+</html>
